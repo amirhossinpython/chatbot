@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>چت با هوش مصنوعی بارد</title>
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <meta name="theme-color" content="#007bff">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div id="app">
+    <!-- نوار بالایی -->
+    <nav class="navbar navbar-light bg-light d-flex justify-content-between">
+        <button id="openMenu" class="btn btn-primary">☰ منو</button>
+        <h2>چت با هوش مصنوعی بارد</h2>
+    </nav>
+
+    <!-- منوی کشویی -->
+    <div id="sidebar" class="sidebar bg-dark">
+        <div class="sidebar-header bg-secondary p-3 text-white">
+            <h3>منو</h3>
+            <button id="closeMenu" class="btn btn-light">بستن منو</button>
+        </div>
+        <ul class="list-unstyled p-3">
+            <li class="text-white">
+                <strong>ایمیل:</strong> h34691217@gmail.com<br>
+                <strong>سازنده:</strong> امیرحسین خزاعی
+            </li>
+        </ul>
+    </div>
+
+    <!-- محیط چت -->
+    <div id="chatContainer" class="container mt-4">
+        <div id="chatBox" class="chat-box p-3 bg-white rounded shadow-sm">
+            <!-- پیام‌ها اینجا نمایش داده می‌شوند -->
+        </div>
+
+        <div class="input-group mt-3">
+            <input type="text" id="userMessage" class="form-control" placeholder="پیام خود را وارد کنید...">
+            <div class="input-group-append">
+                <button id="sendMessage" class="btn btn-primary">ارسال</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- پیغام در حال پردازش -->
+<div id="processing" class="processing">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">در حال پردازش...</span>
+    </div>
+    <p>در حال پردازش...</p>
+</div>
+
+<!-- جاوا اسکریپت -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

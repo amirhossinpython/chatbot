@@ -1,0 +1,87 @@
+/* تنظیمات کلی */
+body {
+    font-family: 'Vazir', sans-serif;
+    background-color: #005f73;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+#app {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* استایل چت */
+#chatContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 80vh;
+}
+
+.chat-box {
+    height: 65vh;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box p {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 75%;
+}
+
+.chat-box .user {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+/* استایل منوی کشویی */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* تنظیمات ریپانسیو */
+@media only screen and (max-width: 768px) {
+    #chatContainer {
+        height: 70vh;
+    }
+}
+
+/* استایل در حال پردازش */
+.processing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.processing p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+

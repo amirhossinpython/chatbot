@@ -1,0 +1,12 @@
+{
+  "name": "Chat with Bard AI",
+  "short_name": "BardAI",
+  "description": "A chat application powered by Bard AI for Persian language conversations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "prefer_related_applications": false
+}
