@@ -6,12 +6,12 @@ import random
 
 app = Flask(__name__)
 
-# گرفتن زمان به شمسی
+
 def get_jalali_time():
-    """برگرداندن تاریخ و زمان جاری به شمسی."""
+    
     return JalaliDatetime.now().strftime('%Y/%m/%d - %H:%M')
 
-# پاسخ‌های از پیش تعریف شده
+
 predefined_responses = {
     "زمان": get_jalali_time,
     "چنل": lambda: "بفرما چنل ما: @Python_Source_1403"
@@ -23,7 +23,7 @@ def get_response_from_api(user_input):
     
     try:
         response = requests.get(url, params=payload)
-        response.raise_for_status()  # بررسی وضعیت پاسخ
+        response.raise_for_status() 
         data = response.json()
         return data['result']
     except requests.exceptions.RequestException as e:
